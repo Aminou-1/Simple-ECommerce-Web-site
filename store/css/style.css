@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+/*Begining of footer*/
+footer{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #2f2e2e;
+    color: white;
+    border-top: 1px solid azure;
+}
+footer p{
+    opacity: .5;
+}
+/*Ending of footer*/

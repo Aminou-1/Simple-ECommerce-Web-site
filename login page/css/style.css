@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --secondary-color--:#ffffff;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+.login_card{
+    background-color: rgba(128, 128, 128, 0.384);
+    padding: 20px;
+    backdrop-filter: blur(2px);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s;
+    z-index: 2;
+    filter: grayscale(100);
+}
+
+.login_card {
+    background-color: rgba(128, 128, 128, 0.384);
+    padding: 20px;
+    backdrop-filter: blur(2px);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login_card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: rgb(163, 220, 235);
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    animation: slideRight 5s infinite linear;
+}
+
+
+.login_card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: rgb(163, 220, 235);
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    animation: slideLeft 5s infinite linear;
+}
+
+
+@keyframes slideRight {
+    0% { left: -100%; opacity: 0; }
+    10% { opacity: 1; }
+    50% { left: 0%; opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+@keyframes slideLeft {
+    0% { right: -100%; opacity: 0; }
+    10% { opacity: 1; }
+    50% { right: 0%; opacity: 1; }
+    90% { opacity: 1; }
+    100% { right: 100%; opacity: 0; }
+}
+
+.login_card:hover{
+    box-shadow: 0 0 20px rgb(214, 207, 207);
+    filter: grayscale(0);
+}
+
+.login_card .text{
+    padding-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #4d4563;
+}
+.login_card .text h3{
+font-family: "Domine", serif;
+font-size: 40px;
+padding-bottom: 20px;
+color: #91a2bb;
+position: relative;
+animation: glowPulse 2s infinite ease-in-out;
+}
+
+.login_card .text h3::after {
+    content: "";
+    position: absolute;
+    left: 24%;
+    bottom: 13px;
+    width: 50%;
+    height: 3px;
+    background: rgb(172, 208, 214);
+    box-shadow: 0 0 20px white, 0 0 20px white;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: neonUnderline 10s infinite ease;
+}
+
+@keyframes neonUnderline {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    10% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    35% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    60% {
+        opacity: 0;
+        transform: scaleX(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 5px #5a8fb3, 0 0 15px #5a8fb3;
+    }
+    50% {
+        text-shadow: 0 0 20px #5a8fb3, 0 0 40px #5a8fb3;
+    }
+    100% {
+        text-shadow: 0 0 5px #5a8fb3, 0 0 15px #5a8fb3;
+    }
+}
+
+.login_card .text p{
+padding-bottom: 10px;
+color: var(--secondary-color--);
+}
+.login_card .login_info{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-bottom: 30px;
+}
+.login_card .login_info input:first-of-type,
+.login_card .login_info input:last-of-type{
+margin-bottom: 20px;
+outline: none;
+border: 1px solid white;
+border-radius: 15px;
+/*width: 20vw;*/
+height: 50px;
+background-color: #5f5e5e;
+width: 100%;
+padding-left: 20px;
+padding-right: 20px;
+color: white;
+transition: all 0.4s ease;
+}
+.login_card .login_info input:first-of-type:focus,
+.login_card .login_info input:last-of-type:focus{
+border-color: rgb(107, 103, 99);
+box-shadow: -2px 4px 19px 7px #2e2d35;
+background-color: #2022242f;
+}
+.login_card .login_info input:first-of-type::placeholder,
+.login_card .login_info input:last-of-type::placeholder{
+color: azure;
+}
+.login_card .options{
+    margin-bottom: 30px;
+}
+.login_card .options a{
+margin-left: 30px;
+text-decoration: none;
+color: #6a84a1;
+transition: color 0.3s ease;
+}
+.login_card .options label{
+    color: var(--secondary-color--);
+    padding-left: 3px;
+}
+.login_card button{
+display: block;
+margin: auto;
+margin-bottom: 35px;
+border: none;
+border-radius: 15px;
+width: 100%;
+height: 50px;
+cursor:pointer;
+color: white;
+background-color: #60738f;
+letter-spacing: 2px;
+box-shadow: -2px 4px 19px 7px #2e2d35;
+transition: all 0.4s ease;
+}
+.login_card button:hover{
+    transform: scale(0.98);
+    background-color: #849cc2;
+    color: #ffffff;
+}
+.login_card button:active{
+    transform: scale(0.9);
+    color: white;
+    background-color: #60738f;
+}
+.login_card .last_part{
+    text-align: center;
+}
+.login_card .last_part p{
+    padding-bottom: 20px;
+    color: var(--secondary-color--);
+}
+.login_card .last_part p a{
+    padding-left: 15px;
+    text-decoration: none;
+    color: #6a84a1;
+    transition: color 0.4s ease;
+}
+.login_card .last_part i{
+    padding-bottom: 20px;
+    padding-left:20px;
+    padding-right: 25px;
+    margin-right: 5px;
+    color: #e4efff;
+    transition: color 0.4s ease;
+}
+.login_card .last_part p a:hover,
+.login_card .options a:hover{
+color: rgb(189, 187, 204);
+}
+.login_card .last_part i:hover{
+    color: #96abd3;
+}

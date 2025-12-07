@@ -1,0 +1,57 @@
+/*Begining of contacts*/
+.contacts{
+      background: linear-gradient(to bottom ,#272424,#453f3f );
+      padding: 50px;
+}
+.contacts .js-h4{
+    opacity: 0;
+    transform: translateY(30px);
+    color: azure;
+    text-align: center;
+    font-size: 2rem;
+}
+.contacts .js-h4.inview{
+    animation: ScrollAnimation 1s ease forwards;
+}
+.contacts .links{
+    margin-top: 100px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.contacts .links .js-icon{
+    opacity: 0;
+    transform: translateY(20px);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease , transform 0.3s ease;
+}
+.contacts .links .js-icon.inview{
+    animation: ScrollAnimation 1s ease forwards;
+}
+.contacts .links .js-icon.inview:nth-child(1){
+    animation-delay: 0.5s;
+}
+.contacts .links .js-icon.inview:nth-child(2){
+    animation-delay: 1s;
+}
+.contacts .links .js-icon.inview:nth-child(3){
+    animation-delay: 1.5s;
+}
+.contacts .links i:nth-of-type(1):hover{
+    color: rgb(46, 97, 46);
+    transform: scale(1.1);
+}
+.contacts .links i:nth-of-type(2):hover{
+    color: rgb(235, 180, 78);
+    transform: scale(1.1);
+}
+.contacts .links i:last-of-type:hover{
+    color: rgb(74, 74, 194);
+    transform: scale(1.1);
+}
+/*Ending of contacts*/

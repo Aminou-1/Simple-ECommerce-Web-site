@@ -1,0 +1,123 @@
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* POPUP */
+.modal-content {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    gap: 25px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: popup 0.45s ease;
+}
+
+/* IMAGE */
+.modal-img {
+    width: 360px;
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    animation: slideRight 0.6s ease-out;
+}
+
+/* TEXT AREA */
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-item {
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+}
+.detail-item:nth-child(1) { animation-delay: 0.25s; }
+.detail-item:nth-child(2) { animation-delay: 0.45s; }
+.detail-item:nth-child(3) { animation-delay: 0.65s; }
+
+/* CLOSE BUTTON */
+.close {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* QUANTITY + BUTTON */
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#modalQty {
+    width: 70px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#addCartBtn {
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    background: #6a5acd;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addCartBtn:hover {
+    background: #5748c4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    .modal-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-img {
+        width: 100%;
+    }
+
+    .modal-actions {
+        justify-content: center;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes slideRight {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popup {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+}
+/*end*/

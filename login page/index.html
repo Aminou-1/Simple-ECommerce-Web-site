@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Login_page</title>
+</head>
+<body>
+    <div class="login_card">
+        <div class="container">
+        <div class="text">
+            <h3>Login</h3>
+            <p>Join us and get premium features</p>
+        </div>
+        <div class="login_info">
+            <input type="text"  id="user"class="user" placeholder="Username or Email" maxlength="12" required >
+            <input type="password" id="pass" class="pass" placeholder="Password" minlength="8" required>
+        </div>
+        <div class="options">
+            <input type="checkbox" id="check">
+            <label for="check">Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <div class="button" id="btn">
+            <button type="button">Sign in</button>
+        </div>
+        <div class="last_part">
+            <p>or continue with</p>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <p>Don't have an account?<a href="#">sign up</a></p> 
+        </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

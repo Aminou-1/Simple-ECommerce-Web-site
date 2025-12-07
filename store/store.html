@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="Imges/Background.jpg">
+    <title>LX Store</title>
+</head>
+<body>
+    <!--Begining of header-->
+                <div class="cart-container">
+             <a href="cart.html" target="_blank">
+              <img src="Imges/Cart.jpg" alt="Cart" class="cart-icon">
+              <span id="cart-count">0</span>
+             </a>
+            </div>
+    <header>
+        <div class="head" id="Home">
+            <a href="#Home">Home</a>
+            <a href="#Products">Products</a>
+            <a href="#Contacts">Contacts</a>
+        </div>
+        <div class="title">
+            <h4>Welcome to a Showcase of the Finest</h4>
+            <h2>Your Journey to the Best <span>Begins Here</span></h2>
+        </div>
+    </header>
+    <!--Ending of header-->
+
+<!--Begining of Products-->
+<section>
+    <div class="products" id="Products">
+        <h4 class="js-text">Step Into a World<br> of Luxury</h4>
+        <div id="products-container"></div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <!-- IMAGE -->
+        <img id="modalImg" class="modal-img" src="" alt="">
+
+        <!-- DETAILS -->
+        <div class="modal-info">
+            <h2 id="modalName" class="detail-item"></h2>
+            <h3 id="modalPrice" class="detail-item"></h3>
+            <p id="modalDesc" class="detail-item"></p>
+
+            <!-- QUANTITY & ADD TO CART -->
+            <div class="modal-actions">
+                <input type="number" id="modalQty" min="1" value="1">
+                <button id="addCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Ending of products -->
+
+    <!-- Begining of contacts -->
+     <div class="contacts" id="Contacts">
+        <h4 class="js-h4">Your Direct Line to Exceptional Service</h4>
+        <div class="links">
+            <i class="fa-solid fa-phone js-icon"></i>
+            <i class="fa-brands fa-instagram js-icon"></i>
+            <i class="fa-brands fa-facebook js-icon"></i>
+        </div>
+     </div>
+     <!-- Ending of contacts -->
+
+     <!-- Begining of footer -->
+     <footer>
+        <p>© 2025 LxStore | Crafted with passion. All rights reserved.</p>
+     </footer>
+      <!-- Ending of footer -->
+
+      <script type="module" src="main.js" ></script>
+</body>
+</html>
